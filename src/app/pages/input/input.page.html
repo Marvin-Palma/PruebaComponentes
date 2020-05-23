@@ -1,0 +1,77 @@
+
+<app-header titulo="Input - Forms"></app-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-list-header>
+      <ion-label>Nombre: {{nombre || 'No hay nombre'}}</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label position="floating">
+        Nombre
+      </ion-label>
+      <ion-input [(ngModel)]="nombre" type="text"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <form #formulario="ngForm" (ngSubmit) ="onSubmitTemplate()">
+
+    <ion-list>
+
+      <ion-list-header>
+        <ion-label>
+          Formulario template: Valido {{formulario.valid}}
+        </ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label position="floating">
+          Email
+        </ion-label>
+        <ion-input 
+        [(ngModel)]="usuario.email" 
+        name="email" 
+        type="email" 
+        pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+        required></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating">
+          Password
+        </ion-label>
+        <ion-input 
+        [(ngModel)]="usuario.password" 
+        name="password" 
+        type="password" 
+        minlength=5
+        maxlength=10
+        required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">
+          Teléfono
+        </ion-label>
+        <ion-input 
+        [(ngModel)]="usuario.telefono" 
+        name="telefono" 
+        type="tel" 
+        minlength=8
+        maxlength=8
+        pattern="[0-9]+"
+        required></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-button expand="full" type="submit"
+    [disabled]="formulario.invalid">Enviar</ion-button>
+
+  </form>
+
+</ion-content>

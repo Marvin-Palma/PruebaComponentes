@@ -74,6 +74,24 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** Gris Personalizado**/
+  --ion-color-grayPersonalizado: #808080;
+  --ion-color-grayPersonalizado-rgb: 128,128,128;
+  --ion-color-grayPersonalizado-contrast: #000000;
+  --ion-color-grayPersonalizado-contrast-rgb: 0,0,0;
+  --ion-color-grayPersonalizado-shade: #717171;
+  --ion-color-grayPersonalizado-tint: #8d8d8d;
+}
+
+/** Gris Personalizado**/
+.ion-color-grayPersonalizado {
+  --ion-color-base: var(--ion-color-grayPersonalizado) !important;
+  --ion-color-base-rgb: var(--ion-color-grayPersonalizado-rgb) !important;
+  --ion-color-contrast: var(--ion-color-grayPersonalizado-contrast) !important;
+  --ion-color-contrast-rgb: var(--ion-color-grayPersonalizado-contrast-rgb) !important;
+  --ion-color-shade: var(--ion-color-grayPersonalizado-shade) !important;
+  --ion-color-tint: var(--ion-color-grayPersonalizado-tint) !important;
 }
 
 @media (prefers-color-scheme: dark) {
